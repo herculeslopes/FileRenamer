@@ -28,10 +28,7 @@ if res == "S":
         print()
         print(f'Index: {index} - File: {cbx}')
 
-        if cbx.endswith('.cbr'):
-            extension = '.cbr'
-        else:
-            extension = '.cbz'
+        extension = os.path.splitext(f)[1]
 
         print(f'File Extension: {extension}')
         os.rename(cbx, f'{name} {index + 1:0>2}{extension}')
